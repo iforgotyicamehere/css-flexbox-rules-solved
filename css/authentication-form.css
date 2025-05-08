@@ -25,23 +25,92 @@ p {
 /* 👇👇👇  ADD YOUR FORM STYLES BENEATH  👇👇👇*/
 
 form {
-  border: 1px solid #a9a9a9;
-  padding: 20px;
+  border: 1px solid #7e7d7d;
+}
+.form-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1px;
+}
+.form-submit-control {
+  padding-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6px;
+}
+
+div .form-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 8px;
+  gap: 2px;
+}
+
+div .form-row label {
+  gap: 15px;
+  font-weight: bold;
+  padding: 6px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+div .form-row input {
+  display: flex;
+  font-size: 1rem;
+  height: 30px;
+  min-width: none;
+  justify-content: space-evenly;
+  border: 1px solid #4b4848;
+}
+
+div .form-drop-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 15px;
+  min-height: 30px;
+  min-width: 6rem;
 }
 
 .subtext {
   color: #a9a9a9;
   font-weight: unset;
+  padding-bottom: 1%;
+}
+a .image {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 6px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
+p {
+  padding: 6px;
+  align-content: flex-start;
+}
+.sign-in-form {
+  border: 1px solid black;
+  padding: 1rem;
+}
 #sign-in,
 #sign-up {
-  width: 100%;
+  min-width: 900px;
+  padding-top: 5px;
 }
 
-a {
-  color: #335eea;
-  text-decoration: none;
+h2 {
+  padding-bottom: 0px;
 }
 
 label {
@@ -53,6 +122,13 @@ input {
   height: 30px;
   padding: 5px;
 }
+.check-box-label {
+  font-weight: normal;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  font-weight: normal;
+}
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -60,24 +136,22 @@ input[type="radio"] {
   height: max-content;
   padding: 0;
 }
-
+a {
+  color: blue;
+}
 input[type="submit"] {
   width: unset;
   height: unset;
-  padding: 14px 20px;
-  background: #335eea;
+  padding: 19px 20px;
+  background: #6212e2;
   color: white;
   font-size: 18px;
-  border: 1px solid #335eea;
-  border-radius: 8px;
+  border: 1px solid #8b8c91;
+  border-radius: 12rem;
   appearance: none;
   outline: none;
   clear: left;
   cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background: #294bbb;
 }
 
 .form select {
