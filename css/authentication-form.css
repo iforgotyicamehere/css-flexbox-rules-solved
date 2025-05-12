@@ -30,83 +30,84 @@ form {
 .form-header {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 1px;
+  padding: 15px;
+  gap: 10px;
 }
 .form-submit-control {
-  padding-top: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  padding: 6px;
+  gap: 30px;
 }
 
 div .form-row {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding: 8px;
-  gap: 2px;
+  padding: 10px;
+  gap: 10px;
 }
 
 div .form-row label {
-  gap: 15px;
   font-weight: bold;
-  padding: 6px;
-  justify-content: flex-start;
-  align-items: flex-start;
+  padding: 1px;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 div .form-row input {
   display: flex;
   font-size: 1rem;
-  height: 30px;
   min-width: none;
   justify-content: space-evenly;
-  border: 1px solid #4b4848;
+  align-items: center;
 }
 
 div .form-drop-box {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  gap: 15px;
-  min-height: 30px;
-  min-width: 6rem;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 5px;
+  height: 2.5rem;
+  width: 80%;
+}
+#city,
+#state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .subtext {
   color: #a9a9a9;
   font-weight: unset;
-  padding-bottom: 1%;
 }
+
 a .image {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 6px;
+  padding: 2px;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
 p {
   padding: 6px;
+  gap: 8px;
   align-content: flex-start;
 }
-.sign-in-form {
-  border: 1px solid black;
-  padding: 1rem;
-}
+
 #sign-in,
 #sign-up {
   min-width: 900px;
-  padding-top: 5px;
 }
 
 h2 {
@@ -119,11 +120,11 @@ label {
 
 input {
   width: 100%;
-  height: 30px;
   padding: 5px;
 }
 .check-box-label {
   font-weight: normal;
+  justify-content: flex-start;
 }
 input[type="checkbox"] + label,
 input[type="radio"] + label {
@@ -154,6 +155,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-.form select {
-  height: 30px;
+.form-group-vertical-control {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: -1rem;
 }

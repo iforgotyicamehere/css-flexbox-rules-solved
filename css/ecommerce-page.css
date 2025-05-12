@@ -31,15 +31,25 @@ section {
 }
 
 .content-wrapper {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   max-width: 964px;
   margin: 0 auto;
 }
 
 .header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
 }
 
 .logo {
@@ -67,10 +77,16 @@ section {
 }
 
 .search-bar i {
+  display: flex;
+  flex-direction: row-reverse;
   color: #8d8ba5;
 }
 
 .options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
 }
 
 .option {
@@ -81,10 +97,14 @@ section {
 
 .option i {
   font-size: 20px;
-  color: #d5ef9a;
+  color: #d6f1c6;
 }
 
 .categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   background-color: #2b2d36;
   padding-top: 20px;
 }
@@ -109,17 +129,31 @@ section {
   border: 1px solid #d5ef9a;
   color: #1f1f27;
 }
-
-.view-options {
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.view-option {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#layout {
+  display: flex;
+}
 i.fa-th-list {
   transform: rotate(180deg);
 }
 
 .section-control {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #8d8ba5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .section-control .view-option {
@@ -130,7 +164,7 @@ i.fa-th-list {
 }
 
 .products {
-  margin-top: 40px;
+  padding-top: 5px;
 }
 
 .product {
@@ -182,33 +216,35 @@ i.fa-th-list {
 /* GRID VIEW STYLES */
 
 .grid.products {
-  flex: 0 0 calc(33.333% - 30px); /* this is how i was able to get my grids to layout evenly even the bottom 2*/
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   justify-content: flex-start;
-  gap: 30px;
-  padding: 30px;
+  gap: 40px;
+  padding: 40px;
+  border-top: 2px solid gray;
+  width: 100%;
 }
 
 .grid .product {
   flex: 0 0 calc(33.333% - 30px); /* this is how i was able to get my grids to layout evenly even the bottom 2*/
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   background: #2b2d36;
-  padding: 20px;
-  min-height: 600px;
+  flex-shrink: 1;
+  gap: 5px;
 }
 .grid .product-name {
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  align-items: end;
+  align-items: center;
+  flex-grow: 1;
+  gap: 15px;
 }
 .grid .product-image-wrapper {
-  border-radius: 6px;
-  height: 230px;
+  height: 200px;
   width: 100%;
 }
 
@@ -217,27 +253,29 @@ i.fa-th-list {
   flex-grow: 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
+  padding: 10px;
+  width: 100%;
 }
-
 .grid .product-info {
   align-content: center;
   display: flex;
   flex-flow: column;
-  justify-content: space-evenly;
-  gap: 0;
-  flex-grow: 1;
-  padding: 0 20px 30px;
-  line-height: 3.5rem;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
 }
 
 .grid .product-action {
+  border-top: 1px solid white;
+  border-left: 0;
   display: flex;
+  gap: 18px;
+  padding: 18px;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-  border-top: 1px solid #353166;
 }
 
 /* LINE VIEW STYLES */
@@ -245,45 +283,50 @@ i.fa-th-list {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 30px;
-  box-sizing: border-box;
 }
 
 .lines .product {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: #2b2d36;
 
-  align-items: center;
-  max-width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 22px;
+  flex-grow: 1;
+  background: #2b2d36;
+}
+.lines .product-name {
+  display: flex;
+  align-items: flex-start;
 }
 
 .lines .product-image-wrapper {
+  display: flex;
+  flex-direction: wrap;
   min-width: 300px;
-  height: 220px;
+  height: 230px;
 }
 
 .lines .product-data {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 18px;
+  flex-grow: 2;
 }
 
 .lines .product-info {
   align-content: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  text-align: center;
-  padding: 20px;
   gap: 10px;
-  flex-grow: 1;
 }
 
 .lines .product-action {
   display: flex;
-  align-content: flex-end;
+  align-items: flex-end;
+  padding: 25px;
+  gap: 13px;
 }
 
 /* LINES-ACTION VIEW */
@@ -292,15 +335,14 @@ i.fa-th-list {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 30px;
 }
 
 .lines-action .product {
   display: flex;
+  flex-direction: row;
   background: #2b2d36;
 
-  align-items: center;
-  max-width: 100%;
+  padding: 20px;
 }
 
 .lines-action .product-image-wrapper {
@@ -310,24 +352,31 @@ i.fa-th-list {
 
 .lines-action .product-data {
   display: flex;
-  flex-direction: column;
-  align-content: center;
-  gap: 12px;
+  flex-direction: row;
+}
+.lines-action .product-name {
+  display: flex;
 }
 
 .lines-action .product-info {
+  align-content: flex-start;
   display: flex;
+
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 10px;
+  padding: 20px;
+  gap: 19px;
+  flex-grow: 1;
 }
 
-.lines-action,
-.product-action {
-  border-left: 1px solid #8d8ba5;
-  padding-left: 30px;
-  min-width: 200px;
-  padding: 10px;
+.lines-action .product-action {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 0;
+  border-left: 1px solid rgb(201, 198, 198);
+  border-width: 100%;
+  gap: 10px;
+  padding-left: 25px;
+  align-items: center;
 }
