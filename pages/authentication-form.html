@@ -29,7 +29,7 @@
         </div>
         <!-- Sign IN form starts here -->
         <form id="sign-in-form">
-          <div class="form-row">
+          <div class="form-input-control">
             <label for="login-field">Login</label>
             <input
               type="email"
@@ -38,25 +38,24 @@
               required
             />
           </div>
-          <div class="form-row">
+          <div class="form-input-control">
             <label for="password-field">Password</label>
             <input
               type="password"
               id="password-field"
               placeholder="passwords must match"
-              maxlength="20"
               minlength="8"
               required
             />
           </div>
-          <div class="form-row">
-            <input type="checkbox" id="stay-signed-in"/>
+          <div class="form-checkbox-control">
+            <input type="checkbox" id="stay-signed-in" />
             <label for="stay-signed-in">Stay signed in</label>
-            
           </div>
+          <hr />
           <div class="form-submit-control">
             <input type="submit" value="Sign in" />
-            <a class="forgot-password" href="/#">Forgot your password?</a>
+            <a href="/#">Forgot your password?</a>
           </div>
         </form>
         <!-- Sign IN form ends here -->
@@ -68,7 +67,7 @@
         </div>
         <!-- Sign UP form starts here -->
         <form id="sign-up-form">
-          <div class="form-row">
+          <div class="form-input-control">
             <label for="name-field">Your name</label>
             <input
               type="text"
@@ -78,7 +77,7 @@
               required
             />
           </div>
-          <div class="form-row">
+          <div class="form-input-control">
             <label for="email">Email</label>
             <input
               type="email"
@@ -87,7 +86,7 @@
               required
             />
           </div>
-          <div class="form-row">
+          <div class="form-input-control">
             <label for="password">Password</label>
             <input
               type="password"
@@ -98,7 +97,7 @@
               required
             />
           </div>
-          <div class="form-row">
+          <div class="form-input-control">
             <label for="confirm-password">Confirm Password</label>
             <input
               type="password"
@@ -109,7 +108,7 @@
               required
             />
           </div>
-          <div class="form-row">
+          <div class="form-input-control">
             <label for="phone">Phone number</label>
             <input
               type="tel"
@@ -119,12 +118,12 @@
               placeholder="ex.: +12336456355"
             />
           </div>
-          <div class="image">
+          <div class="form-input-control">
             <label for="avatar">Avatar</label>
             <input type="file" id="avatar" />
           </div>
-          <div class="form-drop-box">
-            <div class="form-drop-box">
+          <div class="form-group-horizontal-control">
+            <div class="form-input-control">
               <label for="state">State</label>
               <select id="state">
                 <option value="" disabled selected>Select your state</option>
@@ -133,28 +132,28 @@
                 <option value="SD">South Dakota</option>
               </select>
             </div>
-            <div class="form-drop-box">
+            <div class="form-input-control">
               <label for="city">City</label>
               <select id="city">
                 <option value="" disabled selected>Select your city</option>
                 <option value="new-york">New York</option>
                 <option value="washington">Washington DC</option>
-                <option value="dallas">Tennessee</option>
+                <option value="dallas">Dallas</option>
               </select>
             </div>
           </div>
-          <div class="form-row">
+          <div class="form-input-control">
             <p>Gender</p>
             <div class="form-group-vertical-control">
-              <div class="form-row">
+              <div class="form-radio-control">
                 <input type="radio" id="male" name="gender" value="male" />
                 <label for="male">Male</label>
               </div>
-              <div class="form-row">
+              <div class="form-radio-control">
                 <input type="radio" id="female" name="gender" value="female" />
                 <label for="female">Female</label>
               </div>
-              <div class="form-row">
+              <div class="form-radio-control">
                 <input
                   type="radio"
                   id="other"
@@ -164,9 +163,10 @@
                 />
                 <label for="other">Other</label>
               </div>
+            </div>
           </div>
           <hr />
-          <div class="form-submit-control" id="last">
+          <div class="form-submit-control">
             <input type="submit" value="Sign up" />
           </div>
         </form>

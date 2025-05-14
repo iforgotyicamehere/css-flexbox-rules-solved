@@ -30,6 +30,7 @@ form {
 .form-header {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 .content {
   display: flex;
@@ -38,19 +39,16 @@ form {
   padding: 15px;
   gap: 10px;
 }
+div .form-checkbox-control {
+  padding: 12px;
+}
 .form-submit-control {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 30px;
-}
-
-div .form-row {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  gap: 10px;
+  padding: 12px;
 }
 
 div .form-row label {
@@ -60,29 +58,41 @@ div .form-row label {
   justify-content: center;
   align-items: center;
 }
-
+.form-input-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 12px;
+}
 div .form-row input {
   display: flex;
   font-size: 1rem;
   min-width: none;
   justify-content: space-evenly;
   align-items: center;
+  padding: 12px;
+}
+.form-group-horizontal-control {
+  display: flex;
+  flex-direction: row;
+  width: 55px;
 }
 
 div .form-drop-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   gap: 5px;
   padding: 5px;
   height: 2.5rem;
-  width: 80%;
+  min-width: 50px;
 }
 #city,
 #state {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 25rem;
+  height: 2rem;
 }
 
 .subtext {
@@ -105,9 +115,10 @@ p {
   align-content: flex-start;
 }
 
-#sign-in,
-#sign-up {
+#sign-in-form,
+#sign-up-form {
   min-width: 900px;
+  padding: 10px;
 }
 
 h2 {
@@ -153,12 +164,4 @@ input[type="submit"] {
   outline: none;
   clear: left;
   cursor: pointer;
-}
-
-.form-group-vertical-control {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: -1rem;
 }

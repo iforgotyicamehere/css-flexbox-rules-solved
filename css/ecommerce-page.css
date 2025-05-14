@@ -47,22 +47,25 @@ section {
 
 .logo-search {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 25px;
+  gap: 30px;
 }
 
 .logo {
   min-width: max-content;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 900;
   font-family: "Caveat", sans-serif;
 }
 
 .search-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
   width: 400px;
   background: #1f1f27;
-  padding: 10px 20px;
   border-radius: 20px;
 }
 
@@ -80,19 +83,25 @@ section {
   display: flex;
   flex-direction: row-reverse;
   color: #8d8ba5;
+  font: 16px;
 }
 
 .options {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 15px;
 }
 
-.option {
-  min-width: 60px;
-  text-transform: capitalize;
+option {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  gap: 10px;
 }
 
 .option i {
@@ -134,12 +143,15 @@ section {
   flex-wrap: wrap;
 }
 
+.view-options,
 .view-option {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+  margin-bottom: 6px;
 }
 #layout {
   display: flex;
@@ -269,13 +281,15 @@ i.fa-th-list {
 }
 
 .grid .product-action {
-  border-top: 1px solid white;
-  border-left: 0;
+  width: 120%;
+  border-top: 1px solid #8d8ba5;
   display: flex;
-  gap: 18px;
-  padding: 18px;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 /* LINE VIEW STYLES */
